@@ -5,12 +5,12 @@ import "fmt"
 func main() {
 	fmt.Println("Hello, GO!")
 
-	fileName := "report.pdf"
-	fileType := "pdf"
+	fileName := "report"
+	fileType := ".zip"
 	fileSize := "2048"
 	fileAvailable := true
 	fileOwner := "Kartik Gurve"
-	fileFolder := "Documents"
+	// fileFolder := "Documents"
 
 	fmt.Println("---File Information---")
 
@@ -19,5 +19,18 @@ func main() {
 	fmt.Println("File Size : ", fileSize)
 	fmt.Println("File Availability : ", fileAvailable)
 	fmt.Println("File Owner : ", fileOwner)
-	fmt.Println("File Folder : ", fileFolder)
+	// fmt.Println("File Folder : ", fileFolder)
+
+	switch fileType {
+	case ".jpg", ".jpeg", ".png":
+		fmt.Println("Images Folder")
+	case ".mp3", ".mp2", ".mp1":
+		fmt.Println("Songs Folder")
+	case ".pdf", ".txt", ".docx":
+		fmt.Println("Documents Folder")
+	case ".mp4":
+		fmt.Println("Videos Folder")
+	default:
+		fmt.Println("Other")
+	}
 }
